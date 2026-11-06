@@ -87,59 +87,6 @@ export function Contact() {
           </ul>
         </FadeIn>
 
-        <FadeIn delay={0.12}>
-          <form
-            onSubmit={handleSubmit}
-            className="glass glow-border rounded-2xl p-6 sm:p-8"
-            noValidate
-          >
-            <div className="grid gap-5 sm:grid-cols-2">
-              <label className="block sm:col-span-1">
-                <span className="mb-2 block text-sm text-muted">Nombre</span>
-                <input
-                  name="name"
-                  required
-                  autoComplete="name"
-                  className="w-full rounded-xl border border-border/80 bg-background/40 px-3 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted/60 focus:border-accent"
-                  placeholder="Tu nombre"
-                />
-              </label>
-              <label className="block sm:col-span-1">
-                <span className="mb-2 block text-sm text-muted">Email</span>
-                <input
-                  name="email"
-                  type="email"
-                  required
-                  autoComplete="email"
-                  className="w-full rounded-xl border border-border/80 bg-background/40 px-3 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted/60 focus:border-accent"
-                  placeholder="tu@email.com"
-                />
-              </label>
-              <label className="block sm:col-span-2">
-                <span className="mb-2 block text-sm text-muted">Mensaje</span>
-                <textarea
-                  name="message"
-                  required
-                  rows={5}
-                  className="w-full resize-y rounded-xl border border-border/80 bg-background/40 px-3 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted/60 focus:border-accent"
-                  placeholder="Contame sobre el rol o el desafío..."
-                />
-              </label>
-            </div>
-
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <Button type="submit">
-                Enviar mensaje
-                <Send className="size-4" />
-              </Button>
-              {status === "sent" ? (
-                <p className="text-sm text-muted">
-                  Se abrirá tu cliente de correo para completar el envío.
-                </p>
-              ) : null}
-            </div>
-          </form>
-        </FadeIn>
       </div>
     </section>
   );
