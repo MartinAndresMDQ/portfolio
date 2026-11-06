@@ -8,7 +8,7 @@ export const profile = {
   whatsapp: "https://wa.me/542236055332",
   linkedin: "https://www.linkedin.com/in/martin-lencina/",
   github: "https://github.com/MartinAndresMDQ",
-  cvUrl: "/CV_Martin_Lencina.pdf",
+  cvUrl: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/CV_Martin_Lencina.pdf`,
   headline:
     "Más de 10 años diseñando e implementando soluciones robustas en banca, pagos, salud y sector público.",
   summary:
